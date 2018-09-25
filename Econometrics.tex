@@ -1,0 +1,174 @@
+\documentclass{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{bm}
+\geometry{a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm}
+\usepackage[colorlinks,urlcolor=Periwinkle]{hyperref}
+\usepackage{tikz}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\X}{\mathbf{X}} 
+\newcommand{\M}{\mathbf{M}} 
+\newcommand{\e}{\mathbf{e}} 
+\newcommand{\0}{\mathbf{0}} 
+\newcommand{\vbe}{\bm{\beta}}   
+\newcommand{\ve}{\bm{\varepsilon}}  
+\newcommand{\vb}{\mathbf{b}} 
+\newcommand{\pro}{\noindent$\vartriangleright\,$\textbf{问题}.\ }
+\newcommand{\sol}{\noindent$\vartriangleright\,$\textbf{解答}.\ }
+
+\begin{document}
+
+\noindent{\huge \textbf{Problem Set}}\\ 
+
+\section{Finite-Sample Properties of OLS}
+
+\subsection{新增样本点}
+\pro 给定简单线性模型
+\[
+\y = \X \vbe +\ve,
+\]
+其中 
+\[
+\y=(y_1,\cdots,y_n)',\;\X=
+\begin{pmatrix}
+1& x_1\\
+1& x_2\\
+\vdots&\vdots\\
+1& x_n
+\end{pmatrix},\;
+\vbe=(\beta_0,\beta_1)',\;
+\ve=(\varepsilon_1,\cdots,\varepsilon_n)'.
+\]
+设该模型在 Gauss-Markov 假设下，OLS 估计量为 $\vb=(b_0,b_1)'$. 若新增一个样本点
+\[
+y_{n+1}=\beta_0+\beta_1x_{n+1}+\varepsilon_{n+1},
+\]
+求 $\Var(\hat{y}_{n+1}-y_{n+1}|\X,x_{n+1})$，其中 $\hat{y}_{n+1}=b_0+x_{n+1}b_1$. 在给定 $\X$ 的情况下，求出当 $x_{n+1}$ 为何值时， $\Var(\hat{y}_{n+1}-y_{n+1}|\X,x_{n+1})$ 有最小值.\\
+
+
+\sol
+\begin{align*}
+\hat{y}_{n+1}-y_{n+1}&=(b_0+x_{n+1}b_1)-(\beta_0+x_{n+1}\beta_1+\varepsilon_{n+1})\\
+&=(b_0-\beta_0)+x_{n+1}(b_1-\beta_1)-\varepsilon_{n+1}
+\end{align*}
+记 $\bar{x}=n^{-1}\sum_{i=1}^{n}x_i$. 因为
+\begin{align*}
+\Var(\vb|\X,x_{n+1})&=\sigma^2(\X'\X)^{-1}=\sigma^2
+\begin{pmatrix}
+n& \sum\limits_{i=1}^{n}x_i\\
+\sum\limits_{i=1}^{n}x_i& \sum\limits_{i=1}^{n}x_i^2
+\end{pmatrix}^{-1}\\
+&=\frac{\sigma^2}{\sum\limits_{i=1}^{n}(x_i-\bar{x})^2}
+\begin{pmatrix}
+n^{-1}\sum\limits_{i=1}^{n}x_i^2& -\bar{x}\\
+ -\bar{x}& 1
+\end{pmatrix}.
+\end{align*}
+所以
+\[
+\Var(b_0-\beta_0|\X,x_{n+1})=\frac{\sigma^2\sum\limits_{i=1}^{n}x_i^2}{n\sum\limits_{i=1}^{n}(x_i-\bar{x})^2},
+\]
+\[
+\Var[x_{n+1}(b_1-\beta_1)|\X,x_{n+1}]=\frac{\sigma^2x_{n+1}^2}{\sum\limits_{i=1}^{n}(x_i-\bar{x})^2},
+\]
+\[
+\Var(\varepsilon_{n+1}|\X,x_{n+1})=\sigma^2,
+\]
+\[
+\Cov[b_0-\beta_0,x_{n+1}(b_1-\beta_1)|\X,x_{n+1}]=-\frac{\sigma^2\bar{x}x_{n+1}}{\sum\limits_{i=1}^{n}(x_i-\bar{x})^2},
+\]
+\[
+\Cov(b_0-\beta_0,\varepsilon_{n+1}|\X,x_{n+1})=\Cov[x_{n+1}(b_1-\beta_1),\varepsilon_{n+1}|\X,x_{n+1}]=0.
+\]
+由此可得
+\begin{align*}
+\Var(\hat{y}_{n+1}-y_{n+1}|\X,x_{n+1})&=\frac{\sigma^2\sum\limits_{i=1}^{n}x_i^2+n\sigma^2x_{n+1}^2-2n\sigma^2\bar{x}x_{n+1}}{n\sum\limits_{i=1}^{n}(x_i-\bar{x})^2}+\sigma^2\\
+&=\frac{\sigma^2}{\sum\limits_{i=1}^{n}(x_i-\bar{x})^2}\left(x_{n+1}^2-2\bar{x}x_{n+1}+\frac{1}{n}\sum\limits_{i=1}^{n}x_i^2\right)+\sigma^2.
+\end{align*}
+当 $x_{n+1}=\bar{x}$ 时，$\Var(\hat{y}_{n+1}-y_{n+1}|\X,x_{n+1})$ 有最小值.
+
+\subsection{增加解释变量个数会提高 $R^2$}
+\pro 证明对简单线性模型
+\[
+\y_{n\times1} = \X_{n\times K} \vbe_{K\times1} +\ve_{n\times1}, 
+\]
+进行 OLS 回归时，使用 $K-1$ 个解释变量的 $R^2$ 小于等于使用 $K$ 个解释变量时的 的 $R^2$.\\
+
+\sol
+使用 $K$ 个自变量时，OLS 估计量 $\vb$ 最小化了残差平方和
+\[
+\vb=\arg\min_{\hat{\vbe}\in\mathbb{R}^K}\Vert\y-\X\hat{\vbe}\Vert^2.
+\]
+因此，对任意 $\hat{\vbe}\in\mathbb{R}^K$, 有
+\[
+\Vert\y-\X\hat{\vbe}\Vert^2\ge\Vert\y-\X\vb\Vert^2=SSR_K.
+\]
+设使用 $K-1$ 个自变量时对应的 OLS 估计量为 $\vb_{-K}\in\mathbb{R}^{K-1}$. 令 $\vb_{-K}^*=(\vb_{-K},0)$, 利用上式得到
+\[
+SSR_{K-1}=\Vert\y-\X\vb_{-K}\Vert^2=\Vert\y-\X\vb_{-K}^*\Vert^2\ge SSR_K.
+\]
+由 $R^2$ 的表达式
+\[
+R^2=1-\frac{SSR}{\sum\limits_{i=1}^n(y_i-\bar{y})^2}
+\]    
+可知使用 $K-1$ 个解释变量的 $R^2$ 小于等于使用 $K$ 个解释变量时的 的 $R^2$. 该结果的几何解释如下图所示.
+\[
+\begin{tikzpicture}
+\draw [color=black!50,->](0,0) node[left]{$O$}-- node [color=black!20,pos=0.25,above,sloped]{}(3.6,1.8) node[right]{$\mathbf{x}_2$};
+\draw [color=black!50,->](0,0) node[left]{}-- node [color=black!20,pos=0.25,above,sloped]{}(5,0) node[right]{$\mathbf{x}_1$};
+\draw [color=black,->](0,0) node[left]{}-- node [color=black,pos=0.6,above]{$\y$}(3.2,3.8) node[right]{};
+\draw [color=black,->](3.2,0.8) node[left]{}-- node [color=black,pos=0.5,right]{$\e$}(3.2,3.8) node[right]{};
+\draw [color=black,->](0,0) node[left]{}-- node [color=red!70,pos=0.25,above,sloped]{}(3.2,0.8) node[right]{$\hat{\y}$};
+\draw [color=black,->](2,0) node[left]{}-- node [color=black,pos=0.4,left]{$\e_{\hspace{-0.5pt}_{-2}}$}(3.2,3.8) node[right]{};
+\draw [color=black,->](0,0) node[left]{}-- node [color=black,pos=0.8,below]{$\hat{\y}_{\hspace{-2pt}_{-2}}$}(2,0) node[right]{};
+\draw [color=black!70,-,dashed](2,0) node[left]{}-- node [color=red!70,pos=0.25,above,sloped]{}(3.2,0.8) node[right]{};
+\end{tikzpicture}
+\]
+这幅图展示了 $K=2$ 的低维情形，其中 $\mathbf{x}_1$, $\mathbf{x}_2$ 是 $\X$ 的列向量，$\e=\y-\X\vb$. 根据直角三角形的斜边长度大于直角边这一性质可以得到
+\[
+SSR_{1}=\Vert\e_{-2}\Vert^2\ge\Vert\e\Vert^2= SSR_2.
+\] 
+除非 $\y$ 在 $\mathbf{x}_2$ 上的投影为 0，以上不等式严格成立。沿着这个思路，我们可以给出另一种证明。因为
+\[
+\Vert\e_{-K}\Vert^2=\Vert(\e_{-K}-\e)+\e\Vert^2=\Vert\e_{-K}-\e\Vert^2+\Vert\e\Vert^2+2(\e_{-K}-\e)'\e,
+\]
+故只需证明 $(\e_{-K}-\e)'\e=0$. 设使用 $K$ 个自变量时回归时，零化子 $\M=\mathbf{I}_n-\X(\X'\X)^{-1}\X'$，使用 $K-1$ 个自变量时对应的零化子为 $\M_{-K}$. 注意到
+\[
+\X'\e=\0_{K\times 1}\implies\X'_{K-1}\e=\0_{(K-1)\time 1}
+\]
+我们有
+\begin{align*}
+(\e_{-K}-\e)'\e&=\y'\M'_{-K}\e-\y'\M'\e\\
+&=\y'(\mathbf{I}_{n}-\X_{-K}(\X_{-K}'\X_{-K})^{-1}\X_{-K}')\e-\y'\M'\e\\
+&=\y'\e-\X_{-K}(\X_{-K}'\X_{-K})^{-1}\X_{-K}'\e-\y'\M'\M\y\\
+&=\y'\M\y-\y'\M\y\\
+&=0.
+\end{align*}
+于是我们证明了
+\[
+\Vert\e_{-K}\Vert^2=\Vert\e_{-K}-\e\Vert^2+\Vert\e\Vert^2\ge\Vert\e\Vert^2.
+\]
+
+\subsection{模型误设：加入无关变量}
+\pro 已知 DGP（数据生成过程）
+\[
+\y = \X_1 \vbe_1 +\ve
+\]
+满足 Gauss-Markov 假设。若使用如下模型进行估计
+\[
+\y = \X_1 \vbe_1 +\X_2 \vbe_2+\ve^*,
+\]
+得到对应的 OLS 估计量 $\vb=(\vb_1,\vb_2)$，证明 $\E[\vb_1|\X_1,\X_2]=\vbe_1$，$\Var[\vb_1|\X_1,\X_2]\ge\sigma^2(\X_1'\X_1)^{-1}$.
+
+
+\end{document}
