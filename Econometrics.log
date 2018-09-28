@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.25)  27 SEP 2018 01:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.25)  28 SEP 2018 19:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1768,20 +1768,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--106
  []
 
 [2]
-Overfull \hbox (10.84196pt too wide) in paragraph at lines 178--180
-\C70/rm/m/n/10.53937/5f — \C70/rm/m/n/10.53937/52 0 \C70/rm/m/n/10.53937/5b ù \
-C70/rm/m/n/10.53937/5e ” \C70/rm/m/n/10.53937/76 „ \OT1/cmr/m/n/10.53937 OLS \C
-70/rm/m/n/10.53937/4f 0 \C70/rm/m/n/10.53937/8b ¡ \C70/rm/m/n/10.53937/91 Ï $\O
-T1/cmr/bx/n/10.53937 b \OT1/cmr/m/n/10.53937 = (\OT1/cmr/bx/n/10.53937 b[]\OML/
-cmm/m/it/10.53937 ; \OT1/cmr/bx/n/10.53937 b[]\OT1/cmr/m/n/10.53937 )$|\C70/rm/
-m/n/10.53937/ff ^^L| \C70/rm/m/n/10.53937/8b Á \C70/rm/m/n/10.53937/66 ^^N $\OT
-1/cmr/m/n/10.53937 E[\OT1/cmr/bx/n/10.53937 b[]\OMS/cmsy/m/n/10.53937 j\OT1/cmr
-/bx/n/10.53937 X[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/bx/n/10.53937 X[]\OT1/cmr/m
-/n/10.53937 ] = \OML/cmm/b/it/10.53937 ^^L[]$|\C70/rm/m/n/10.53937/ff ^^L| $[]\
-OT1/cmr/m/n/10.53937 [\OT1/cmr/bx/n/10.53937 b[]\OMS/cmsy/m/n/10.53937 j\OT1/cm
-r/bx/n/10.53937 X[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/bx/n/10.53937 X[]\OT1/cmr/
-m/n/10.53937 ] \OMS/cmsy/m/n/10.53937 ^^U \OML/cmm/m/it/10.53937 ^^[[]\OT1/cmr/
-m/n/10.53937 (\OT1/cmr/bx/n/10.53937 X[]X[]\OT1/cmr/m/n/10.53937 )[]$. 
+Overfull \hbox (27.87158pt too wide) in paragraph at lines 178--180
+\C70/rm/m/n/10.53937/5c ^^F \C70/rm/m/n/10.53937/5f — \C70/rm/m/n/10.53937/52 0
+ \C70/rm/m/n/10.53937/5b ù \C70/rm/m/n/10.53937/5e ” \C70/rm/m/n/10.53937/76 „ 
+\OT1/cmr/m/n/10.53937 OLS \C70/rm/m/n/10.53937/4f 0 \C70/rm/m/n/10.53937/8b ¡ \
+C70/rm/m/n/10.53937/91 Ï $\OT1/cmr/bx/n/10.53937 b \OT1/cmr/m/n/10.53937 = (\OT
+1/cmr/bx/n/10.53937 b[]\OML/cmm/m/it/10.53937 ; \OT1/cmr/bx/n/10.53937 b[]\OT1/
+cmr/m/n/10.53937 )$. \C70/rm/m/n/10.53937/57 ( \OT1/cmr/m/n/10.53937 Gauss-Mark
+ov \C70/rm/m/n/10.53937/50 G \C70/rm/m/n/10.53937/5b š \C70/rm/m/n/10.53937/6e 
+á \C70/rm/m/n/10.53937/8d ³ \C70/rm/m/n/10.53937/76 „ \C70/rm/m/n/10.53937/67 a
+ \C70/rm/m/n/10.53937/4e ö |\C70/rm/m/n/10.53937/ff ^^L| \C70/rm/m/n/10.53937/
+8b Á \C70/rm/m/n/10.53937/66 ^^N $\OT1/cmr/m/n/10.53937 E[\OT1/cmr/bx/n/10.5393
+7 b[]\OMS/cmsy/m/n/10.53937 j\OT1/cmr/bx/n/10.53937 X[]\OML/cmm/m/it/10.53937 ;
+ \OT1/cmr/bx/n/10.53937 X[]\OT1/cmr/m/n/10.53937 ] =
  []
 
 
@@ -1789,41 +1788,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
 
-[3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
+[3] [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
  (./Econometrics.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
 Package rerunfilecheck Info: File `Econometrics.out' has not changed.
 (rerunfilecheck)             Checksum: 2C8A4E94B00C9403AC3D6D681373DF7E;612.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 34059 strings out of 493013
- 603043 string characters out of 6136993
- 672929 words of memory out of 5000000
- 36879 multiletter control sequences out of 15000+600000
- 40502 words of font info for 154 fonts, out of 8000000 for 9000
+ 34090 strings out of 493013
+ 603425 string characters out of 6136993
+ 672930 words of memory out of 5000000
+ 36907 multiletter control sequences out of 15000+600000
+ 40772 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,54p,10459b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/s
 imsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS
-/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:
-/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simsun
-.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/font
+/fonts/simsun.ttc><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:
+/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei
+.ttf><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/font
 s/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WIND
 OWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc>
 <c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/sim
 sun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/f
 onts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/W
 INDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.t
-tc><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/
+tc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/
 simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOW
-S/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simsun.ttc><c
+S/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c
 :/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsu
-n.ttc><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fon
-ts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WIN
+n.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fon
+ts/simhei.ttf><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WIN
 DOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc
 ><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/si
 msun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/
@@ -1831,31 +1830,31 @@ fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/
 WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.
 ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts
 /simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDO
-WS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simhei.ttf><
+WS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><c:/WINDOWS/fonts/simsun.ttc><
 c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simh
 ei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/WINDOWS/fo
-nts/simhei.ttf><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-0.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2016/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmib10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-extra/cmmib7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/201
-6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msam10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msbm7.pfb>
-Output written on Econometrics.pdf (4 pages, 459897 bytes).
+nts/simhei.ttf><c:/WINDOWS/fonts/simhei.ttf><c:/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2016/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr5.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2016/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Econometrics.pdf (5 pages, 470043 bytes).
 PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 10 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 487 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 11 named destinations out of 1000 (max. 500000)
+ 269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

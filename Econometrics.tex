@@ -170,13 +170,13 @@ SSR_{1}=\Vert\e_{-2}\Vert^2\ge\Vert\e\Vert^2= SSR_2.
 \subsection{模型误设：加入无关变量}
 \pro 已知 DGP（数据生成过程）
 \[
-\y = \underset{(n\times K_1)}{\X_1}\vbe_1 +\vep
+\y = \underset{(n\times K_1)}{\X_1}\vbe_1 +\vep.
 \]
-满足 Gauss-Markov 假设。若使用如下模型进行估计
+若使用如下模型进行估计
 \[
 \y = \underset{(n\times K_1)}{\X_1} \vbe_1 +\underset{(n\times K_2)}{\X_2} \vbe_2+\vep^*,
 \]
-得到对应的 OLS 估计量 $\vb=(\vb_1,\vb_2)$，证明 $\E[\vb_1|\X_1,\X_2]=\vbe_1$，$\Var[\vb_1|\X_1,\X_2]\ge\sigma^2(\X_1'\X_1)^{-1}$.\\
+将得到对应的 OLS 估计量 $\vb=(\vb_1,\vb_2)$. 在 Gauss-Markov 假定满足的条件下，证明 $\E[\vb_1|\X_1,\X_2]=\vbe_1$，$\Var[\vb_1|\X_1,\X_2]\ge\sigma^2(\X_1'\X_1)^{-1}$.\\
 
 \sol 设 $\M=\mathbf{I}_n-\X(\X'\X)^{-1}\X'$，$\M_2=\mathbf{I}_n-\X_2(\X_2'\X_2)^{-1}\X_2'$. 用 $\X'_1\M_2$ 左乘
 \[
@@ -194,7 +194,22 @@ SSR_{1}=\Vert\e_{-2}\Vert^2\ge\Vert\e\Vert^2= SSR_2.
 \[
 \X'_1\M_2\y = \X'_1\M_2\X_1\vb_1 .
 \]
-由此解出
+为证明 $\X'_1\M_2\X_1$ 可逆，我们可以使用反证法. 设矩阵 $\X'_1\M_2\X_1$ 的秩小于 $K_1$，则存在非零向量 $\mathbf{v}\in\mathbb{R}^{K_1}$，使得
+\[
+\X'_1\M_2\X_1\mathbf{v}=\mathbf{0},
+\]
+从而有
+\[
+\mathbf{v}'\X'_1\M_2\X_1\mathbf{v}=(\M_2\X_1\mathbf{v})'(\M_2\X_1\mathbf{v})=0\implies \M_2\X_1\mathbf{v}=\mathbf{0}.
+\]
+由 $\M_2\X_2=\0$ 知 $\mathrm{Im}\X_2\subseteq\mathrm{Ker}\M_2$. 注意到 $\dim\mathrm{Im}\X_2=\dim\mathrm{Ker}\M_2=K_2$，因此有 $\mathrm{Im}\X_2=\mathrm{Ker}\M_2$. 故存在 $\mathbf{w}\in\mathbb{R}^{K_1}$，使得 \[
+\X_1\mathbf{v}=\X_2\mathbf{w}\in\mathrm{Im}\X_1\cap\mathrm{Im}\X_2.
+\]
+由 $\X_{1}$ 列满秩知 $\X_1\mathbf{v}\ne\mathbf{0}$，故 $\dim(\mathrm{Im}\X_1\cap\mathrm{Im}\X_2)\ge1$，从而
+\[
+\dim(\mathrm{Im}\X_1\cup\mathrm{Im}\X_2)=\dim\mathrm{Im}\X_1+\dim\mathrm{Im}\X_2-\dim(\mathrm{Im}\X_1\cap\mathrm{Im}\X_2)\le K_1+K_2-1,
+\]
+这与 $(\X_1,\X_2)$ 列满秩矛盾！这样就证明了 $\X'_1\M_2\X_1$ 可逆. 由此解出
 \[
 \vb_1=(\X'_1\M_2\X_1)^{-1}\X'_1\M_2\y.
 \]
@@ -211,22 +226,22 @@ SSR_{1}=\Vert\e_{-2}\Vert^2\ge\Vert\e\Vert^2= SSR_2.
 \[
 \E[\vb_1-\vbe_1|\X_1,\X_2]=\E[\mathbf{C}\vep|\X_1,\X_2]=\mathbf{C}\E[\vep|\X_1,\X_2]=0,
 \]
-即 $\E[\vb_1|\X_1,\X_2]=\vbe_1$. 下面证明一个引理：
+即 $\E[\vb_1|\X_1,\X_2]=\vbe_1$. 下面证明一个引理：设 $\mathbf{A},\mathbf{B}$ 正定，
 \[
 \mathbf{A}\ge\mathbf{B}\implies\mathbf{B}^{-1}\ge\mathbf{A}^{-1}.
 \]
 事实上，这可由恒等式
 \[
-B^{-1}-A^{-1} = A^{-1}(A-B)A^{-1}
-=A^{-1}(A-B)A^{-1} + A^{-1}(A-B)B^{-1}(A-B)A^{-1}
+\mathbf{B}^{-1}-\mathbf{A}^{-1} = \mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1}
+=\mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1} + \mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{B}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1}
 \]
-直接得到.
+直接得到. 因为
 \begin{align*}
 \Var[\vb_1|\X_1,\X_2]&=\Var[\vb_1-\vbe_1|\X_1,\X_2]\\
 &=\Var[\mathbf{C}\vep|\X_1,\X_2]\\
 &=\mathbf{C}\Var[\vep|\X_1,\X_2]\mathbf{C}'\\
 &=\sigma^2(\X'_1\M_2\X_1)^{-1}\X'_1\M_2\M_2'\X_1(\X'_1\M_2'\X_1)^{-1}\\
-&=\sigma^2(\X'_1\M_2\X_1)^{-1}
+&=\sigma^2(\X'_1\M_2\X_1)^{-1},
 \end{align*}
 要证明
 \[
