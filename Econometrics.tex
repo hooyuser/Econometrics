@@ -266,4 +266,19 @@ SSR_{1}=\Vert\e_{-2}\Vert^2\ge\Vert\e\Vert^2= SSR_2.
 \[
 \y = \underset{(n\times K_1)}{\X_1}\vbe_1 +\vep^*.
 \]
+证明 $\E[\vb_1|\X_1]\neq\vbe_1$,并说明等号何时成立.\\
+\sol 易得
+\begin{align*}
+\vb_1&=(\X'_1\X_1)^{-1}\X'_1\y\\
+&=(\X'_1\X_1)^{-1}\X'_1(\X_1\vbe_1+\X_2\vbe_2+\vep)\\
+&=\vbe_1+(\X'_1\X_1)^{-1}\X_2\vbe_2+(\X'_1\X_1)^{-1}\vep
+\end{align*}
+故
+\begin{align*}
+\E[\vb_1|\X_1]&=\E[\vbe_1+(\X'_1\X_1)^{-1}\X_2\vbe_2+(\X'_1\X_1)^{-1}\vep|\X_1]\\
+&=\vbe_1+\E[(\X'_1\X_1)^{-1}\X_2\vbe_2|\X_1]\\
+&=\vbe_1+(\X'_1\X_1)^{-1}\E[\X_2|\X_1]\vbe_2\\
+&\neq\vbe_1
+\end{align*}
+显然，等号成立当且仅当$\E[\X_2|\X_1]=0$.
 \end{document}
