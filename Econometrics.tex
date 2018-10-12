@@ -226,24 +226,27 @@ SSR_{1}=\Vert\e_{-2}\Vert^2\ge\Vert\e\Vert^2= SSR_2.
 \[
 \E[\vb_1-\vbe_1|\X_1,\X_2]=\E[\mathbf{C}\vep|\X_1,\X_2]=\mathbf{C}\E[\vep|\X_1,\X_2]=0,
 \]
-即 $\E[\vb_1|\X_1,\X_2]=\vbe_1$. 下面证明一个引理：设 $\mathbf{A},\mathbf{B}$ 正定，
-\[
-\mathbf{A}\ge\mathbf{B}\implies\mathbf{B}^{-1}\ge\mathbf{A}^{-1}.
-\]
-事实上，这可由恒等式
-\[
-\mathbf{B}^{-1}-\mathbf{A}^{-1} = \mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1}
-=\mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1} + \mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{B}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1}
-\]
-直接得到. 因为
+即 $\E[\vb_1|\X_1,\X_2]=\vbe_1$. 接着可求出
 \begin{align*}
 \Var[\vb_1|\X_1,\X_2]&=\Var[\vb_1-\vbe_1|\X_1,\X_2]\\
 &=\Var[\mathbf{C}\vep|\X_1,\X_2]\\
 &=\mathbf{C}\Var[\vep|\X_1,\X_2]\mathbf{C}'\\
 &=\sigma^2(\X'_1\M_2\X_1)^{-1}\X'_1\M_2\M_2'\X_1(\X'_1\M_2'\X_1)^{-1}\\
-&=\sigma^2(\X'_1\M_2\X_1)^{-1},
+&=\sigma^2(\X'_1\M_2\X_1)^{-1}.
 \end{align*}
-要证明
+下面证明一个引理：设 $\mathbf{A},\mathbf{B}$ 为对称正定阵，则
+\[
+\mathbf{A}\ge\mathbf{B}\implies\mathbf{B}^{-1}\ge\mathbf{A}^{-1}.
+\]
+事实上，这可由恒等式
+\[
+\begin{aligned}
+\mathbf{B}^{-1}-\mathbf{A}^{-1} 
+&=\mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1} + \mathbf{A}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{B}^{-1}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1}\\
+&=((\mathbf{A}-\mathbf{B})^{\frac{1}{2}}\mathbf{A}^{-1})'((\mathbf{A}-\mathbf{B})^{\frac{1}{2}}\mathbf{A}^{-1}) + (\mathbf{B}^{-\frac{1}{2}}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1})'(\mathbf{B}^{-\frac{1}{2}}(\mathbf{A}-\mathbf{B})\mathbf{A}^{-1})
+\end{aligned}
+\]
+直接得到. 因为 $(\X'_1\M_2\X_1)^{-1}, (\X_1'\X_1)^{-1}$ 正定. 要证明
 \[
 \sigma^2(\X'_1\M_2\X_1)^{-1}\ge\sigma^2(\X_1'\X_1)^{-1},
 \]
@@ -253,32 +256,32 @@ SSR_{1}=\Vert\e_{-2}\Vert^2\ge\Vert\e\Vert^2= SSR_2.
 \]
 设投影矩阵 $\mathbf{P}_2=\X_2(\X_2'\X_2)^{-1}\X_2'=\mathbf{I}_n-\M$，则只需证
 \[
-\X_1'\mathbf{P}_2\X_1=(\mathbf{P}_2\X_1)'(\mathbf{P}_2\X_1)\ge\mathbf{O}.
+\X_1'\X_1-\X'_1\M_2\X_1=\X_1'\mathbf{P}_2\X_1=(\mathbf{P}_2\X_1)'(\mathbf{P}_2\X_1)\ge\mathbf{O}.
 \]
 上式确实成立，因此我们证明了 $\Var[\vb_1|\X_1,\X_2]\ge\sigma^2(\X_1'\X_1)^{-1}$.
 
 \subsection{模型误设：遗漏变量}
 \pro 已知 DGP（数据生成过程）
 \[
-\y = \underset{(n\times K_1)}{\X_1} \vbe_1 +\underset{(n\times K_2)}{\X_2} \vbe_2+\vep
+\y = \underset{(n\times K_1)}{\X_1} \vbe_1 +\underset{(n\times K_2)}{\X_2} \vbe_2+\vep.
 \]
 若使用如下模型进行估计
 \[
 \y = \underset{(n\times K_1)}{\X_1}\vbe_1 +\vep^*.
 \]
-证明 $\E[\vb_1|\X_1]\neq\vbe_1$,并说明等号何时成立.\\
-\sol 易得
+证明 $\E[\vb_1|\X_1]\neq\vbe_1$，并说明等号何时成立.\\
+
+\sol 由
 \begin{align*}
 \vb_1&=(\X'_1\X_1)^{-1}\X'_1\y\\
 &=(\X'_1\X_1)^{-1}\X'_1(\X_1\vbe_1+\X_2\vbe_2+\vep)\\
 &=\vbe_1+(\X'_1\X_1)^{-1}\X_2\vbe_2+(\X'_1\X_1)^{-1}\vep
 \end{align*}
-故
+可得
 \begin{align*}
 \E[\vb_1|\X_1]&=\E[\vbe_1+(\X'_1\X_1)^{-1}\X_2\vbe_2+(\X'_1\X_1)^{-1}\vep|\X_1]\\
-&=\vbe_1+\E[(\X'_1\X_1)^{-1}\X_2\vbe_2|\X_1]\\
-&=\vbe_1+(\X'_1\X_1)^{-1}\E[\X_2|\X_1]\vbe_2\\
-&\neq\vbe_1
+&=\vbe_1+(\X'_1\X_1)^{-1}\E[\X_2|\X_1]\vbe_2+(\X'_1\X_1)^{-1}\E[\vep|\X_1]\\
+&=\vbe_1+(\X'_1\X_1)^{-1}\E[\X_2|\X_1]\vbe_2.
 \end{align*}
-显然，等号成立当且仅当$\E[\X_2|\X_1]=0$.
+因此 $\E[\vb_1|\X_1]$ 一般不等于 $\vbe_1$. 当且仅当 $\E[\X_2|\X_1]\vbe_2=0$ 时，等号成立.
 \end{document}
